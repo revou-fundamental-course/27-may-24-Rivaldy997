@@ -1,1 +1,56 @@
 /* ini cs */
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav>section{
+    display: flex;
+    align-items: center;
+}
+
+.icon-logo {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-item{
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.section-content{
+    background-color: aqua;
+}
+
+.banner-content{
+    height: 258px;
+    border: 1px solid black;
+}
+
+.facilities-display{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.form-result{
+    height: 100px;
+    border: 1px solid black;
+}
+
+.message-us-content{
+    display: flex;
+}
+
+.result-content{
+    width: 100%;
+}
