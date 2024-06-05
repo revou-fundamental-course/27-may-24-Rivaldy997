@@ -222,6 +222,7 @@ footer{
 
     .message-us-content{
         flex-direction: column;
+        font-size: 15px;
     }
 
     .form-result{
