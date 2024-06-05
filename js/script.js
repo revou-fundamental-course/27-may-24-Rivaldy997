@@ -1,8 +1,8 @@
 // ini js
 
 //input nama
-//let username =prompt('Siapakah nama anda?','');
-//document.getElementById('username').innerHTML = username;
+let username =prompt('Siapakah nama anda?','');
+document.getElementById('username').innerHTML = username;
 
 //banner slide
 var slideIndex= 1;
