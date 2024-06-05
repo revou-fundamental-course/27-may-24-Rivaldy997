@@ -86,6 +86,13 @@ img{
     height: 100%;
 }
 
+.sub-header{
+    color: bisque;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .facilities-display{
     display: flex;
     justify-content: space-around;
