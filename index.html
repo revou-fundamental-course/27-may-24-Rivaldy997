@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achmad Rivaldi Dwi Putra Portofolio</title>
-    <link rel="stylesheet" href="css/styles.css"
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <nav>
+    <nav class="header-wrapper">
         <div class="icon-logo"></div>
-
-        <section>
+        <section class="nav-group">
             <a class="nav-item" href="#home"> Home</a>
-            <a class="nav-item" href="#facilities">Our Facilities</a>
+            <a class="nav-item" href="#facilities">Facilities</a>
             <a class="nav-item" href="#message-us">Message Us</a>
         </section>
     </nav>
@@ -22,15 +21,40 @@
 
     <section class="section-content">
         <section id="home">
-            <header>
-                <h1>Hi Rivaldi, Welcome To Website</h1>
+            <header class="home-header">
+                <h1>Hi, <span id="username"></span>... Welcome To Website</h1>
+                <h1>SMK Negeri 1 Cerme Gresik</h1>    
             </header>
 
             <article>
-                <p>Ini Artikel</p>
+                <h2>Visi & Misi</h2>
+                <h1>Visi :</h1>
+                <p>Mencetak Tenaga Kerja Menengah Profesional, Cerdas, Bermoral, dan Berdaya Saing Global.</p>
+                <h1>Misi :</h1>
+                <ul>
+                    <li>Menggunakan kurikulum sekolah nasional</li>
+                    <li>Menggunakan sinkronisasi kurikulum dengan DU/DI nasional maupun internasional untuk pengembangan pembelajaran berkelanjutan</li>
+                    <li>Mengembangkan sistem pembelajaran dan manajemen sekolah berbasis ICT</li>
+                    <li>Mengembangkan pengadaan sarana prasarana yang memadai dan mengikuti perkembangan teknologi</li>
+                    <li>Meningkatkan profesionalisme tenaga pendidik dan kependidikan</li>
+                    <li>Mengembangkan sistem kewirausahaan/entrepreneurship melalui unit pengelolaan jasa</li>
+                  </ul>
 
-                <div class="banner-content"></div>
 
+
+
+                <div class="banner-container">
+                    <img class="banner-slideshow" src="./asset/gerbang.png"/>
+                    <img class="banner-slideshow" src="./asset/gedungutama.png"/>
+                    <img class="banner-slideshow" src="./asset/maxresdefault.jpg"/>
+
+                </div>
+                <div class="slide-button">
+                    <button class="banner-button" onclick="plusDivs(-1)">⏮</button>
+                    <button class="banner-button" onclick="plusDivs(1)">⏭</button>
+                </div>
+
+                
             </article>
         </section>
 
@@ -38,23 +62,23 @@
 
         <section id="facilities">
             <header>
-                <h1>Our Facilities</h1>
+                <h1>Facilities</h1>
             </header>
 
             <article class="facilities-display">
-                <div style=" text-align: center;">
-                    <div style="width:90px; height:90px; border: 1px solid black; border-radius: 50%;"></div>
-                    <h5>Facilities 1</h5>
+                <div>
+                    <div class="facilities-one"></div>
+                    <h5>Lab dan Bengkel</h5>
                 </div>
 
                 <div>
-                    <div style="width:90px; height:90px; border: 1px solid black; border-radius: 50%;"></div>
-                    <h5>Facilities 2</h5>
+                    <div class="facilities-two"></div>
+                    <h5>Ruang Kelas</h5>
                 </div>
 
                 <div>
-                    <div style="width:90px; height:90px; border: 1px solid black; border-radius: 50%;"></div>
-                    <h5>Facilities 3</h5>
+                    <div class="facilities-three"></div>
+                    <h5>Lapangan Olahraga</h5>
                 </div>
             </article>
         </section>
@@ -68,22 +92,87 @@
         
             <section class="message-us-content">
                 <section>
-                    <form>
-                        <label>Nama:</label>
-                        <input />
+                    <form class="input-data" name="message-form" onsubmit="return validateForm()">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>Nama</label>
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input required type="text" style="width: 95.5%;" placeholder="Nama" name="full-name">
+                                </td>
+                            </tr>           
+                            <tr>
+                                <td>
+                                    <label>No. Handphone</label>
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input required type="number" style="width: 95.5%;" placeholder="Nomor Hp" name="phone-number">
+                                </td>
+                            </tr>                  
+                            <tr>
+                                <td>
+                                    <label>Email Aktif</label>
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input required type="email" style="width: 95.5%;" placeholder="Email" name="email">
+                                </td>
+                            </tr>                  
+                            <tr>
+                                <td>
+                                    <label>Tanggal Lahir</label>
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input required type="date" style="width: 97%;" name="birth-date">
+                                </td>                                 
+                            </tr>                          
+                            <tr>
+                                <td>
+                                    <label>Jenis Kelamin</label>
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input required type="radio" id="male" name="gender" value="Laki-laki">
+                                    <label for="male">Laki-laki</label>
+                                    <input type="radio" id="female" name="gender" value="Perempuan">
+                                    <label for="female">Perempuan</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <label>Pesan</label>
+                                </td> 
+                                <td valign="top">:</td>
+                                <td>
+                                    <textarea required placeholder="Pesan" name="messages"></textarea>
+                                </td>    
+                            </tr>
+                        </table>                     
+                        <button type="submit" id="submit-button" onclick="submitForm()" value="submit">Submit</button>              
                     </form>
                 </section>
     
                 <section class="result-content">
-                    <div class="form-result"></div>
+                    <div class="form-result" id="form-result">
+                        <p class="form-label">Nama :<span id="sender-full-name"></span></p>
+                        <p class="form-label">No.Handphone :<span id="sender-phone-number"></span></p>
+                        <p class="form-label">Email :<span id="sender-email"></span></p>
+                        <p class="form-label">Tanggal Lahir :<span id="sender-birth-date"></span></p>
+                        <p class="form-label">Jenis Kelamin :<span id="sender-gender"></span></p>
+                        <p class="form-label">Pesan :<span id="sender-messages"></span></p>
+                    </div>
                 </section>     
             </section>              
         </section>
     </section>
-
     <footer>
-
+        <h5>Created By Achmad Rivaldi Dwi Putra</h5>
     </footer>
-    
+    <script src="js/script.js"></script>
 </body>
+
 </html>
