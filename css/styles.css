@@ -209,7 +209,23 @@ footer{
     }
 
     .banner-container{
-        width: auto;
+        width: fit-content;
+    }
+
+    .banner-button{
+        width: 8%;
+    }
+
+    .facilities-display{
+        flex-direction: column;
+    }
+
+    .message-us-content{
+        flex-direction: column;
+    }
+
+    .form-result{
+        width: 250%;
     }
 }
 
